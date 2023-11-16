@@ -15,7 +15,6 @@ param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}'
 param environmentType string
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
-var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
 var processOrderQueueName = 'processorder'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
